@@ -1,8 +1,6 @@
-// import dotenv from './node_modules/dotenv';
 import 'regenerator-runtime/runtime';
 import 'core-js/stable';
 
-// dotenv.config();
 let url = '';
 
 export const state = {
