@@ -35,15 +35,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- mvc architecture
+- node.js moduls
+- [LeafletJS](https://leafletjs.com/)
+- [IP Geolocation API by IPify](https://geo.ipify.org/)
+- parcel package build
 
 ### What I learned
 
