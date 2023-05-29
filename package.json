@@ -4,7 +4,7 @@
   "description": "check for IP address or domain",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html"
   },
   "author": "cornelia",
   "license": "ISC",
