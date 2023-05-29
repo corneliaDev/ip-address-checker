@@ -28,7 +28,7 @@ export const checkAddress = function (address) {
 export const loadIP = async function (url) {
   try {
     if (!url) url = 'https://geo.ipify.org/api/v2/country,city?apiKey=<KEY>&';
-    url = url.replace('<KEY>', process.env.API_KEY);
+    url = url.replace('<KEY>', envkey_SECRET_KEY);
     console.log(url);
     const res = await fetch(url);
     const data = await res.json();
