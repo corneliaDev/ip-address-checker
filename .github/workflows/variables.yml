@@ -11,4 +11,4 @@ jobs:
         uses: SpicyPizza/create-envfile@v1.3
         with:
           envkey_SECRET_KEY: ${{ secrets.API_KEY }}
-          file_name: .env
+          envkey_SOME_API_KEY: '123456abcdef'
