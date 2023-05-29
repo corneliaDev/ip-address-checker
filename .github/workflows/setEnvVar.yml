@@ -13,6 +13,6 @@ jobs:
 
   steps: 
     -name: display custom environment variables
-    run: |
+    run: 
     echo "the region is ${{env.region}}"
-    echo "the region 2 is $region"
+    
