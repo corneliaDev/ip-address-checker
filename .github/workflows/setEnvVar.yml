@@ -1,4 +1,4 @@
-name setEnvVar
+name: setEnvVar
 
 on: [push]
 
