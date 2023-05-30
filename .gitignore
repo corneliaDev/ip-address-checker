@@ -18,5 +18,6 @@ dist
 .parcel-cache
 design
 .env
+.netlify
 README_cm.md
 style-guide.md

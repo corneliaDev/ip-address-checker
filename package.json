@@ -4,16 +4,22 @@
   "description": "check for IP address or domain",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "dev": "netlify dev"
   },
   "author": "cornelia",
   "license": "ISC",
   "dependencies": {
+    "@netlify/functions": "^1.6.0",
+    "axios": "^1.4.0",
     "core-js": "^3.30.2",
     "dotenv": "^16.0.3",
     "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
+    "buffer": "^5.7.1",
+    "netlify-cli": "^15.2.0",
+    "netlify-lambda": "^2.0.16",
     "os-browserify": "^0.3.0",
     "parcel": "^2.8.3",
     "path-browserify": "^1.0.1",
