@@ -1,7 +1,5 @@
 import 'regenerator-runtime/runtime';
 import 'core-js/stable';
-// const dotenv = require('dotenv').config();
-// import axios from 'axios';
 
 let url = '';
 
