@@ -31,7 +31,7 @@ const controlRender = function (data) {
 };
 
 const init = function () {
-  locationView.loadMapHandler(controlLoadIP);
-  locationView.searchHandler(controlSearchResults);
+  // locationView.loadMapHandler(controlLoadIP);
+  // locationView.searchHandler(controlSearchResults);
 };
 init();

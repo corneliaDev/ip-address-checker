@@ -68,6 +68,7 @@
   z-index: 999;
 
   @include respond(mobil) {
+    bottom: -3rem;
     width: 100%;
     padding: 1rem;
     align-items: center;
