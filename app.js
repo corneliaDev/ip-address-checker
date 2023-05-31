@@ -1,7 +1,7 @@
 import 'regenerator-runtime/runtime';
 import 'core-js/stable';
-const dotenv = require('dotenv').config();
-import axios from 'axios';
+// const dotenv = require('dotenv').config();
+// import axios from 'axios';
 
 let url = '';
 
@@ -9,9 +9,11 @@ export const state = {
   ipData: {},
   coords: [],
   query: '',
-  IPAddress: '',
+  IpAddress: '',
   domain: '',
 };
+
+////CHECK SEARCH Query ///////////
 
 export const checkAddress = function (address) {
   if (!address) return;
@@ -21,21 +23,19 @@ export const checkAddress = function (address) {
   const checkDomain = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/;
   url = `${
     checkIpAddress.test(address)
-      ? (state.IPAddress = address)
+      ? (state.IpAddress = address)
       : checkDomain.test(address)
       ? (state.domain = address)
       : ``
   }`;
-  // return url;
 };
 
-//////////////////////////////////////
-//IPiFy
+///////////////LOAD IP DATA //////////////
 
 export const loadIP = async function (data) {
   if (!data) url = `/.netlify/functions/getIP`;
-  if (data.domain) url = `/.netlify/functions/getIPDomain?domain=${data}`;
-  if (data.IPAddress) url = `/.netlify/functions/getIPAdd?ipAddress=${data}`;
+  if (!state.IpAddress && state.domain) url = `/.netlify/functions/getIPDomain?domain=${data}`;
+  if (state.IpAddress && !state.domain) url = `/.netlify/functions/getIPAdd?IpAddress=${data}`;
 
   try {
     const res = await fetch(url, {

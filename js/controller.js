@@ -5,11 +5,10 @@ const controlSearchResults = async function () {
   try {
     const query = locationView.getQuery();
     app.checkAddress(query);
-    // console.log(app.state.IPAddress, app.state.domain);
     if (app.state.IPAddress && !app.state.domain) await app.loadIP(`IpAddress=${app.state.IPAddress}`);
     if (!app.state.IPAddress && app.state.domain) await app.loadIP(`domain=${app.state.domain}`);
-    /* if (!url.includes('ip') || !url.includes('domain'))
-      throw new Error(`"${query}" please enter a correct domain or ip address`); */
+    if (!app.state.IPAddress && !app.state.domain)
+      throw new Error(`"${query}" please enter a correct domain or ip address`);
 
     controlRender(app.state);
   } catch (err) {
