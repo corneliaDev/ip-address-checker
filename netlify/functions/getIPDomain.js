@@ -3,7 +3,11 @@
 const axios = require('axios');
 
 exports.handler = async (event, context, callback) => {
-  let resVal = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.API_KEY}&`;
+  const domain = event.queryStringParameters.domain || '';
+
+  // 83.133.244.219
+  console.log(domain);
+  let resVal = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.API_KEY}&${domain}`;
 
   try {
     let response = await axios.get(resVal, {
