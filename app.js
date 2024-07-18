@@ -7,7 +7,7 @@ export const state = {
   ipData: {},
   coords: [],
   query: '',
-  IpAddress: '',
+  IPAddress: '',
   domain: '',
 };
 

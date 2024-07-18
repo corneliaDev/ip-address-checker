@@ -22,6 +22,7 @@ const controlLoadIP = async function () {
     controlRender(app.state);
   } catch (err) {
     locationView._renderError(err);
+    console.log(err);
   }
 };
 
