@@ -35,7 +35,7 @@ class LocationView {
   _generateMarkup(data) {
     return `<div class="data__col">
       <h2 class="data__header">IP Address</h2>
-      <p class="data__text" id="ipAddress">${data.ip}</p>
+      <p class="data__text" id="IPAddress">${data.ip}</p>
       <div class="data__line"></div>
     </div>
     <div class="data__col">

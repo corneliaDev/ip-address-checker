@@ -16,12 +16,12 @@ export const state = {
 export const checkAddress = function (address) {
   if (!address) return;
 
-  const checkIpAddress =
+  const checkIPAddress =
     /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
   const checkDomain = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/;
   url = `${
-    checkIpAddress.test(address)
-      ? (state.IpAddress = address)
+    checkIPAddress.test(address)
+      ? (state.IPAddress = address)
       : checkDomain.test(address)
       ? (state.domain = address)
       : ``
@@ -32,8 +32,8 @@ export const checkAddress = function (address) {
 
 export const loadIP = async function (data) {
   if (!data) url = `/.netlify/functions/getIP`;
-  if (!state.IpAddress && state.domain) url = `/.netlify/functions/getIPDomain?domain=${data}`;
-  if (state.IpAddress && !state.domain) url = `/.netlify/functions/getIPAdd?IpAddress=${data}`;
+  if (!state.IPAddress && state.domain) url = `/.netlify/functions/getIPDomain?domain=${data}`;
+  if (state.IPAddress && !state.domain) url = `/.netlify/functions/getIPAdd?IpAddress=${data}`;
 
   try {
     const res = await fetch(url, {
